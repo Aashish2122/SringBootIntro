@@ -17,6 +17,9 @@ public class IntroductionProjectApplication implements CommandLineRunner {
 	@Autowired
 	Banana banana;
 
+	@Autowired //example of field injection
+	DBService dbService;
+
 	public static void main(String[] args) {
 		SpringApplication.run(IntroductionProjectApplication.class, args);
 //		Apple obj = new Apple();
@@ -28,9 +31,10 @@ public class IntroductionProjectApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		obj.eatApple();
-		banana.eatBanana();
-		obj1.eatApple();
+//		obj.eatApple();
+//		banana.eatBanana();
+//		obj1.eatApple();
+		System.out.println(dbService.getData());
 	}
 
 }
